@@ -56,10 +56,12 @@ else
     string[] firstStringArray = FillStringArray(n);
     PrintStringArray(firstStringArray);
     int size = FindSizeOfArrayRows(firstStringArray);
-    if (n == 0) Console.WriteLine("[]");
+
+    if (size == 0) 
+    Console.WriteLine(" --> []");
     else
     {
-        Console.WriteLine(" --> ");
+        Console.Write(" --> ");
         string[] secondStringArray = FillNewStringArray(firstStringArray, size);
         PrintStringArray(secondStringArray);
     };
