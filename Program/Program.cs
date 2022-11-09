@@ -8,3 +8,12 @@
     }
     return stringArray;
 }
+void PrintStringArray(string[] stringArray)
+{
+    Console.Write("[");
+    for (int i = 0; i < stringArray.Length - 1; i++)
+    {
+        Console.Write($"{stringArray[i]}, ");
+    }
+    Console.Write($"{stringArray[stringArray.Length - 1]}]");
+}
