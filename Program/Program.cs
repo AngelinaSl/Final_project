@@ -44,3 +44,23 @@ string[] FillNewStringArray(string[] array, int n)
     }
     return newStringArray;
 }
+
+Console.WriteLine("Введите количество элементов массива (рекомендуем ввести не более 5ти): ");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n > 5)
+    Console.WriteLine("Некорректный ввод данных. Введите число, которое меньше или равно 5.");
+else if (n == 0) Console.WriteLine("Некорректный ввод данных. Массив не может состоять из 0 элементов.");
+else if (n < 0) Console.WriteLine("Некорректный ввод данных. Размер массива не может быть отрицательным числом. ");
+else
+{
+    string[] firstStringArray = FillStringArray(n);
+    PrintStringArray(firstStringArray);
+    int size = FindSizeOfArrayRows(firstStringArray);
+    if (n == 0) Console.WriteLine("[]");
+    else
+    {
+        Console.WriteLine(" --> ");
+        string[] secondStringArray = FillNewStringArray(firstStringArray, size);
+        PrintStringArray(secondStringArray);
+    };
+}
