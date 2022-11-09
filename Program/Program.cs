@@ -29,3 +29,18 @@ int FindSizeOfArrayRows(string[] array)
     }
     return size;
 }
+string[] FillNewStringArray(string[] array, int n)
+{
+
+    string[] newStringArray = new string[n];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 4)
+        {
+            newStringArray[j] = array[i];
+            j++;
+        }
+    }
+    return newStringArray;
+}
